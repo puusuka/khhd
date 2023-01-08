@@ -13,7 +13,7 @@ use App\Http\Controllers\shopController;
 |
 */
 
-Route::get('/shops', [shopController::class, 'index']);
+Route::get('/shops', [shopController::class, 'index'])->name('shop.list');
 
 Route::get('/', function () {
     return redirect('/shops');
