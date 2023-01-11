@@ -14,6 +14,10 @@ use App\Http\Controllers\shopController;
 */
 
 Route::get('/shops', [shopController::class, 'index'])->name('shop.list');
+Route::get('/shop/{id}', [shopController::class, 'show'])->name('shop.detail');
+Route::get('/shop/new', [shopController::class, 'create'])->name('shop.new');
+
+
 
 Route::get('/', function () {
     return redirect('/shops');
